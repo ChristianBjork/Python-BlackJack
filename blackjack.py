@@ -8,22 +8,7 @@ from chips import Chips
 player_chips = Chips()
   
     #Player Bet
-def take_bet(chips):
 
-    while True:
-        try:
-            #Place the bet
-            print("Your chips total is: ", chips.total)
-            chips.bet = int(input("How many chips would you like to bet?: "))  
-        except ValueError:
-            print("You have to bet a number!")
-        else:
-            if chips.bet > chips.total:
-                print("You bet can't be higher than your total amount of chips: ", chips.total)
-            elif chips.bet < 0:
-                print("You can't bet a negative value!")
-            else:
-                break     
 
 
 
@@ -40,8 +25,8 @@ while True:
 
 
     if dealer_or_player == "play":
-        take_bet(player_chips)
-    
+        #take_bet(player_chips)
+        Chips.take_bet(player_chips)
         #Deal the cards
         #Display the cards
         #Dealer cards    
